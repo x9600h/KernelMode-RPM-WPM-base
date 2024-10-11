@@ -13,12 +13,7 @@ extern "C"
 }
 
 void debug_print(PCSTR text) {
-
-#ifndef DEBUG
-	UNREFERENCED_PARAMETER(text);
-#endif
-
-	KdPrintEx((DPFLTR_IHVDRIVER_ID, DPFLTR_INFO_LEVEL, text));
+	KdPrintEx((DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, text));
 }
 
 
